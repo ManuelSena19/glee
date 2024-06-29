@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatelessWidget {
@@ -12,10 +13,11 @@ class Home extends StatelessWidget {
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.only(left: 25),
-          child: Icon(
-            Icons.menu,
+          child: SvgPicture.asset(
+            'assets/icons/hamburger.svg',
             color: color.onPrimary,
-            size: 25,
+            width: 22,
+            height: 18,
           ),
         ),
         actions: [
@@ -40,18 +42,20 @@ class Home extends StatelessWidget {
           RichText(
             text: TextSpan(children: [
               TextSpan(
-                  text: 'Welcome back,',
-                  style: GoogleFonts.alegreya(
-                    color: color.onPrimary,
-                    fontSize: 30,
-                  )),
+                text: 'Welcome back,',
+                style: GoogleFonts.alegreya(
+                  color: color.onPrimary,
+                  fontSize: 30,
+                ),
+              ),
               TextSpan(
-                  text: ' Sena!',
-                  style: GoogleFonts.alegreya(
-                    color: color.onPrimary,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  )),
+                text: ' Sena!',
+                style: GoogleFonts.alegreya(
+                  color: color.onPrimary,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ]),
           ),
           const SizedBox(
@@ -205,7 +209,7 @@ class Task extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: 157,
+          height: 165,
           padding: const EdgeInsets.symmetric(
             horizontal: 20,
             vertical: 15,
@@ -230,7 +234,7 @@ class Task extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 100),
+                padding: const EdgeInsets.only(right: 50),
                 child: Text(
                   subtitle,
                   style: TextStyle(
@@ -262,12 +266,17 @@ class Task extends StatelessWidget {
             ],
           ),
         ),
-        Positioned(
-          top: 0,
-          bottom: 0,
-          left: 200,
-          child: Image.asset(assetName),
-        )
+        Align(
+          alignment: Alignment.centerRight,
+          child: Transform.translate(
+            offset: const Offset(0, 50),
+            child: Image.asset(
+              assetName,
+              height: 62.14,
+              width: 80,
+            ),
+          ),
+        ),
       ],
     );
   }

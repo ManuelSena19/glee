@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:glee/screens/home.dart';
 import 'package:glee/screens/playlist.dart';
 import 'package:glee/screens/profile.dart';
@@ -28,7 +29,7 @@ class _NavState extends State<Nav> {
       body: pages[widget.index ?? currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
-        onTap: (index){
+        onTap: (index) {
           setState(() {
             currentIndex = index;
           });
@@ -37,34 +38,50 @@ class _NavState extends State<Nav> {
         backgroundColor: color.surface,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedIconTheme: IconThemeData(
-          size: 30,
-          color: color.onPrimary,
-        ),
-        unselectedIconTheme: const IconThemeData(
-          size: 30,
-          color: Color.fromRGBO(205, 208, 227, 1)
-        ),
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            activeIcon: Icon(Icons.home_filled),
-            label: 'Home'
+            icon: SvgPicture.asset(
+              'assets/icons/home.svg',
+              color: const Color.fromRGBO(205, 208, 227, 1),
+            ),
+            activeIcon: SvgPicture.asset(
+              'assets/icons/home.svg',
+              color: color.onPrimary,
+            ),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.audiotrack_outlined),
-              activeIcon: Icon(Icons.audiotrack),
-              label: 'Playlist'
+            icon: SvgPicture.asset(
+              'assets/icons/playlist.svg',
+              color: const Color.fromRGBO(205, 208, 227, 1),
+            ),
+            activeIcon: SvgPicture.asset(
+              'assets/icons/playlist_filled.svg',
+              color: color.onPrimary,
+            ),
+            label: 'Playlist',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.people_alt_outlined),
-              activeIcon: Icon(Icons.people_alt),
-              label: 'Profile'
+            icon: SvgPicture.asset(
+              'assets/icons/profile.svg',
+              color: const Color.fromRGBO(205, 208, 227, 1),
+            ),
+            activeIcon: SvgPicture.asset(
+              'assets/icons/profile.svg',
+              color: color.onPrimary,
+            ),
+            label: 'Profile',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.settings_outlined),
-              activeIcon: Icon(Icons.settings),
-              label: 'Settings'
+            icon: SvgPicture.asset(
+              'assets/icons/settings.svg',
+              color: const Color.fromRGBO(205, 208, 227, 1),
+            ),
+            activeIcon: SvgPicture.asset(
+              'assets/icons/settings.svg',
+              color: color.onPrimary,
+            ),
+            label: 'Settings',
           ),
         ],
       ),

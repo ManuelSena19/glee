@@ -1,9 +1,15 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:glee/consts/theme.dart';
 import 'package:glee/screens/onboarding.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      enabled: false,
+      builder: (context) => const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,4 +25,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

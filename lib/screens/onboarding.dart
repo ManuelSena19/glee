@@ -13,16 +13,12 @@ class Onboarding extends StatelessWidget {
       body: Stack(
         clipBehavior: Clip.none,
         children: [
-          Positioned(
-            top: 0,
-            bottom: 0,
-            right: 0,
+          Align(
+            alignment: Alignment.centerLeft,
             child: Image.asset('assets/images/circle.png'),
           ),
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: -100,
+          Align(
+            alignment: Alignment.bottomCenter,
             child: Image.asset('assets/images/onboarding.png'),
           ),
           Padding(
