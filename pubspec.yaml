@@ -15,12 +15,13 @@ dependencies:
   google_fonts: ^6.2.1
   flutter_svg: ^2.0.10+1
   device_preview: ^1.2.0
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
 
 flutter:
 

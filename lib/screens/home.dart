@@ -234,7 +234,7 @@ class Task extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 50),
+                padding: const EdgeInsets.only(right: 80),
                 child: Text(
                   subtitle,
                   style: TextStyle(
@@ -269,7 +269,7 @@ class Task extends StatelessWidget {
         Align(
           alignment: Alignment.centerRight,
           child: Transform.translate(
-            offset: const Offset(0, 50),
+            offset: const Offset(-10, 50),
             child: Image.asset(
               assetName,
               height: 62.14,
