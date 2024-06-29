@@ -35,7 +35,6 @@ class _NavState extends State<Nav> {
           });
         },
         elevation: 0,
-        backgroundColor: color.surface,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         items: [

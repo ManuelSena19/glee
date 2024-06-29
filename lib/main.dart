@@ -10,7 +10,7 @@ Future<void> main() async {
     ScreenUtilInit(
       designSize: const Size(375, 812),
       builder: (_, child) => DevicePreview(
-        enabled: true,
+        enabled: false,
         builder: (context) => const MyApp(),
       ),
     ),
